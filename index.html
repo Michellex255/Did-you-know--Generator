@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Did you know, Generator</title>
   </head>
@@ -13,7 +14,7 @@
       </header>
 
       <main>
-        <form>
+        <form id="info-generator-form">
           <input
             type="text"
             placeholder="Enter the topic you'd like information on ...."
@@ -24,14 +25,7 @@
           />
           <input type="Submit" class="submit-button" />
         </form>
-        <div class="content">
-          <br />
-          On Earth's smallest continent, Europe, you'll find the smallest town
-          in the world.
-          <br />
-          The biggest church on earth. A knighted penguin. And 200 unique
-          languages.
-        </div>
+        <div class="content" id="info"></div>
       </main>
 
       <footer>
