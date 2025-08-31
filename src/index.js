@@ -1,5 +1,14 @@
+function showSpinner() {
+  document.getElementById("loading-spinner").classList.remove("hidden");
+}
+function hideSpinner() {
+  document.getElementById("loading-spinner").classList.add("hidden");
+}
+
 function displayinfo(response) {
+  hideSpinner();
   console.log("info generated");
+
   new Typewriter("#info", {
     strings: response.data.answer,
     autoStart: true,
@@ -10,6 +19,9 @@ function displayinfo(response) {
 
 function generateInfo(event) {
   event.preventDefault();
+
+  document.getElementById("info").innerHTML = "";
+  showSpinner();
 
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "d374t43e29a36b438a5593oaba8810fc";
