@@ -7,7 +7,6 @@ function hideSpinner() {
 
 function displayinfo(response) {
   hideSpinner();
-  console.log("info generated");
 
   new Typewriter("#info", {
     strings: response.data.answer,
